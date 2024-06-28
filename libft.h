@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:32:16 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/04 18:20:37 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/06/28 18:31:00 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include "ft_printf/libftprintf.h"
+# include "ft_get_next_line/get_next_line_bonus.h"
 
 typedef struct s_list
 {
