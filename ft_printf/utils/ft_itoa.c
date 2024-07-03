@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 18:05:17 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/20 11:49:02 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/03 14:56:44 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*ft_fill_tab(char *tab, int size, unsigned long int number, \
 	return (tab);
 }
 
-char	*ft_itoa(long int n, int *error)
+char	*ft_printf_itoa(long int n, int *error)
 {
 	char				*tab;
 	size_t				size;

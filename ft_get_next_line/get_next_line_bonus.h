@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:35:25 by ekrebs            #+#    #+#             */
-/*   Updated: 2024/02/21 18:12:26 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/03 14:54:56 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 #  define FD_MAX 2048
 # endif
 
-enum e_errors
+enum e_gnl_errors
 {
 	ERR_MALLOC = 1,
 	ERR_READ = 2,
@@ -40,10 +40,10 @@ enum e_errors
 char	*get_next_line(int fd);
 
 /* get_next_line_utils.c */
-size_t	ft_strlen(const char *s);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_gnl_strlen(const char *s);
+void	*ft_gnl_memmove(void *dest, const void *src, size_t n);
+char	*ft_gnl_strjoin(char const *s1, char const *s2);
 int		ft_ind_strchr(const char *s, int c);
-char	*ft_strdup(const char *s);
+char	*ft_gnl_strdup(const char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 17:04:59 by ekrebs            #+#    #+#             */
-/*   Updated: 2024/02/21 18:08:24 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/06/28 19:01:15 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static char	*ft_strjoin_free(char *s1, char *s2)
 	char	*str;
 
 	if (!s1)
-		str = ft_strdup(s2);
+		str = ft_gnl_strdup(s2);
 	else if (!s2)
-		str = ft_strdup(s1);
+		str = ft_gnl_strdup(s1);
 	else
-		str = ft_strjoin(s1, s2);
+		str = ft_gnl_strjoin(s1, s2);
 	free(s1);
 	free(s2);
 	return (str);
@@ -38,15 +38,15 @@ static char	*ft_parse_line(char *buffer, char *stash, int *error)
 	line = malloc((ind_endline + 2) * sizeof(char));
 	if (!line)
 		return (*error = ERR_MALLOC, free(buffer), NULL);
-	line = ft_memmove(line, buffer, ind_endline + 1);
+	line = ft_gnl_memmove(line, buffer, ind_endline + 1);
 	if (!line)
 		return (*error = ERR_MALLOC, free(buffer), NULL);
 	line[ind_endline + 1] = '\0';
-	stash = ft_memmove(stash, &buffer[ind_endline + 1], \
-		(ft_strlen(buffer) - ind_endline));
+	stash = ft_gnl_memmove(stash, &buffer[ind_endline + 1], \
+		(ft_gnl_strlen(buffer) - ind_endline));
 	if (!stash)
 		return (*error = ERR_MALLOC, free(buffer), NULL);
-	stash[(ft_strlen(buffer) - ind_endline)] = '\0';
+	stash[(ft_gnl_strlen(buffer) - ind_endline)] = '\0';
 	free(buffer);
 	return (line);
 }
@@ -90,7 +90,7 @@ char	*get_next_line(int fd)
 	if (!stash[fd][0])
 		line = NULL;
 	else
-		line = ft_strdup(stash[fd]);
+		line = ft_gnl_strdup(stash[fd]);
 	ind_endline = ft_ind_strchr(line, '\n');
 	if (ind_endline == -1)
 		line = ft_read_line(fd, line, &ind_endline, &error);

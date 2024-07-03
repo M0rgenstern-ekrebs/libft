@@ -6,13 +6,13 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 18:11:42 by ekrebs            #+#    #+#             */
-/*   Updated: 2024/02/21 18:12:00 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/06/28 19:01:15 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_gnl_strlen(const char *s)
 {
 	size_t	i;
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strdup(const char *s)
+char	*ft_gnl_strdup(const char *s)
 {
 	char	*new_s;
 	size_t	size;
@@ -32,7 +32,7 @@ char	*ft_strdup(const char *s)
 
 	if (!s)
 		return (NULL);
-	size = ft_strlen(s) + 1;
+	size = ft_gnl_strlen(s) + 1;
 	new_s = malloc (size);
 	if (!new_s)
 		return (NULL);
@@ -66,7 +66,7 @@ int	ft_ind_strchr(const char *s, int c)
 	return (-1);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_gnl_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
 	int		len;
@@ -75,7 +75,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = ft_gnl_strlen(s1) + ft_gnl_strlen(s2);
 	new = malloc((len + 1) * sizeof(char));
 	if (!new)
 		return (NULL);
@@ -95,7 +95,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (new);
 }
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_gnl_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*bytes_dest;
 	const unsigned char	*bytes_src;

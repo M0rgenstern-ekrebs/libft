@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:41:15 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/20 12:09:04 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/03 14:56:23 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 #  define NULL_PTR "0x0"
 # endif
 
-typedef enum e_errors
+typedef enum e_printf_errors
 {
 	ERROR_FTPRINTF = -1,
 	CRASH_WRITE = -2,
@@ -57,7 +57,7 @@ int		ft_flag_unknown(char c, int *error);
 //#----------[./utils]----------#//
 int		ft_putchar(const unsigned char c, int *error);
 int		ft_putstr(const char *str, int *error);
-int		ft_strlen(const char *str, int *error);
-char	*ft_itoa(long int n, int *error);
+int		ft_printf_strlen(const char *str, int *error);
+char	*ft_printf_itoa(long int n, int *error);
 char	*ft_itox(unsigned long long x, int *error);
 #endif
