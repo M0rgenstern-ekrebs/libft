@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 15:55:11 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/18 19:28:00 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/14 17:39:10 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_flag_upper_x(unsigned int x, int *error)
 			hex[i] -= ('a' - 'A');
 		i++;
 	}
-	written = ft_putstr(hex, error);
+	written = ft_printf_putstr(hex, error);
 	free(hex);
 	return (written);
 }

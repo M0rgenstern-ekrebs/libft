@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:41:15 by ekrebs            #+#    #+#             */
-/*   Updated: 2024/07/03 14:56:23 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/14 17:34:52 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ int		ft_flag_upper_x(unsigned int X, int *error);
 int		ft_flag_unknown(char c, int *error);
 
 //#----------[./utils]----------#//
-int		ft_putchar(const unsigned char c, int *error);
-int		ft_putstr(const char *str, int *error);
+int		ft_printf_putchar(const unsigned char c, int *error);
+int		ft_printf_putstr(const char *str, int *error);
 int		ft_printf_strlen(const char *str, int *error);
 char	*ft_printf_itoa(long int n, int *error);
 char	*ft_itox(unsigned long long x, int *error);

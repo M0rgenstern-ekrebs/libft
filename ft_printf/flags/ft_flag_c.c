@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 14:19:31 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/18 19:28:26 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/14 17:38:16 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_flag_c(unsigned char c, int *error)
 {
 	int	written;
 
-	written = ft_putchar(c, error);
+	written = ft_printf_putchar(c, error);
 	return (written);
 }

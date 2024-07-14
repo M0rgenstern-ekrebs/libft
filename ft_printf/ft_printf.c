@@ -6,7 +6,7 @@
 /*   By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 19:40:49 by ekrebs            #+#    #+#             */
-/*   Updated: 2023/12/21 18:33:40 by ekrebs           ###   ########.fr       */
+/*   Updated: 2024/07/14 17:37:26 by ekrebs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_printf(char *str, ...)
 		if (str[i] == '%' && str[i + 1])
 			total_written += ft_switch(str[i++ + 1], l_args, &error);
 		else
-			total_written += ft_putchar(str[i], &error);
+			total_written += ft_printf_putchar(str[i], &error);
 		if (error)
 			return (va_end(l_args), ERROR_FTPRINTF);
 		i++;

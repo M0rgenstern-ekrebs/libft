@@ -6,7 +6,7 @@
 #    By: ekrebs <ekrebs@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 16:00:28 by ekrebs            #+#    #+#              #
-#    Updated: 2024/06/28 18:25:58 by ekrebs           ###   ########.fr        #
+#    Updated: 2024/07/14 17:42:35 by ekrebs           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,9 +74,9 @@ SRCS =	ft_isalpha.c	\
 		ft_printf/flags/ft_flag_unknown.c		\
 		\
 		ft_printf/utils/ft_itoa.c				\
-		ft_printf/utils/ft_putchar.c			\
-		ft_printf/utils/ft_putstr.c				\
-		ft_printf/utils/ft_strlen.c				\
+		ft_printf/utils/ft_printf_putchar.c		\
+		ft_printf/utils/ft_printf_putstr.c		\
+		ft_printf/utils/ft_printf_strlen.c		\
 		ft_printf/utils/ft_itox.c				\
 
 DIR_PRTINF = ft_printf/libftprintf.a
